@@ -1,0 +1,116 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #071426 0%, #081422 100%);
+    color: #e6f3f8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.main-container {
+    background-color: transparent;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+.tasks-section {
+    background: linear-gradient(180deg, rgba(7, 20, 34, 0.9), rgba(4, 14, 22, 0.85));
+    color: #e6f3f8;
+    max-width: 520px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(2, 8, 20, 0.6);
+    padding: 28px;
+}
+
+.text-section h1 {
+    margin: 0 0 6px 0;
+    font-size: 1.6rem;
+}
+
+.text-section p {
+    margin: 0 0 14px 0;
+    color: #bcd6e6;
+}
+
+.add-task {
+    display: flex;
+    gap: 8px;
+}
+
+.add-task .new-task {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit;
+}
+
+.add-task button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #00d4ff, #00a3ff);
+    color: #041827;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-task button:hover {
+    opacity: 0.95;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    color: #dbeff6;
+}
+
+.task-list li button {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.task-list li .delete {
+    background: linear-gradient(90deg, #ff7b7b, #ff4b4b);
+    color: white;
+}
+
+.task-list li .delete:hover {
+    filter: brightness(0.95);
+}
+
+.task-list li .edit {
+    background: linear-gradient(90deg, #ffd166, #ffb347);
+    color: #081422;
+    margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+    .tasks-section {
+        padding: 18px;
+    }
+
+    .text-section h1 {
+        font-size: 1.3rem;
+    }
+}
