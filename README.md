@@ -6,8 +6,9 @@ Each project is isolated in its own folder and focuses on specific topics such a
 
 # 📂 Projects
 
-- Task List
-    A simple CRUD task list application using DOM manipulation and localStorage for data persistence.
+## Task List
+
+A simple CRUD task list application using DOM manipulation and localStorage for data persistence.
 
 *(More projects will be added over time.)*
 

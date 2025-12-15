@@ -81,9 +81,9 @@ class TaskList {
     showIndex(storageData) {
         let mainContainer = document.querySelector('.main-container');
         let historyDiv = document.createElement('div');
-        let storageData = JSON.parse(localStorage.getItem('task'));
-        historyDiv.textContent = storageData
-        gis
+        let historyData = JSON.parse(localStorage.getItem('task'));
+        historyDiv.textContent = historyData
+        // gis
     }
 }
 let iniciateApp = new TaskList()
