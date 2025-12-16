@@ -7,7 +7,9 @@ class TaskList {
     manageTasks() {
         let form = document.querySelector('.task-form');
         let taskList = document.querySelector('.task-list');
+        // let historyDiv = document.querySelector('.history-div');
 
+        // this.changeClass(historyDiv)
         this.indexTask()
         this.deleteIndex()
 
@@ -61,7 +63,16 @@ class TaskList {
         indexBtn.addEventListener('click', (e) => {
             e.preventDefault();
             let storageData = JSON.parse(localStorage.getItem('task'))
+
+            if (!storageData) {
+                alert('You dont have a task history')
+                return
+            }
             console.log(storageData)
+            this.showIndex(storageData)
+
+            //Changes hitory-div className for CSS
+            this.changeClass()
             return
         })
     }
@@ -79,11 +90,66 @@ class TaskList {
     }
 
     showIndex(storageData) {
-        let mainContainer = document.querySelector('.main-container');
-        let historyDiv = document.createElement('div');
-        let historyData = JSON.parse(localStorage.getItem('task'));
-        historyDiv.textContent = historyData
-        // gis
+        let textBtnDiv = document.querySelector('.text-btn-div');
+
+
+        // Remove old title if exists
+        let oldTitleHistory = document.querySelector('.title-history')
+        if (oldTitleHistory) {
+            oldTitleHistory.remove()
+        }
+
+        //Create new title and add to the mainContainer
+        let title = document.createElement('h1')
+        title.classList.add('title-history')
+        title.textContent = 'Your task history'
+        textBtnDiv.appendChild(title)
+
+        //Iniciate the event listener to clear the history and add the clearButton
+        let ulDiv = document.querySelector('.history-ul')
+        this.clearHistory(textBtnDiv, ulDiv)
+
+        //Remove old task list history if exists
+        let oldLiHistory = document.querySelectorAll('.history-li')
+        if (oldLiHistory) {
+            for (let li of oldLiHistory) {
+                li.remove()
+            }
+        }
+
+        // Iterate over the array 'storageData' and create a 'li' for each element to add to the ulDiv
+        for (let data of storageData) {
+            let liHistory = document.createElement('li')
+            liHistory.textContent += data
+            liHistory.classList.add('history-li')
+            ulDiv.appendChild(liHistory)
+        }
+        return
+    }
+
+    clearHistory(textBtnDiv, ulDiv) {
+        let oldBtn = document.querySelector('.clear-btn');
+
+        if (oldBtn) {
+            oldBtn.remove()
+        }
+        let clearBtn = document.createElement('button');
+        clearBtn.textContent = 'Clear history'
+        clearBtn.classList.add('clear-btn')
+        textBtnDiv.appendChild(clearBtn)
+        clearBtn.addEventListener('click', (e) => {
+            let historyDiv = document.querySelector('.container-history');
+            historyDiv.classList.replace('container-history', 'history-div')
+            ulDiv.textContent = ''
+            textBtnDiv.textContent = ''
+        })
+    }
+
+    // Changes hitory-div class name, to container-history
+    changeClass() {
+        let historyDiv = document.querySelector('.history-div');
+        historyDiv.classList.add('container-history')
+        return
     }
 }
 let iniciateApp = new TaskList()
