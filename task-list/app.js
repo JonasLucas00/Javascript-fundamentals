@@ -21,7 +21,6 @@ class TaskList {
                 return alert('Value is null')
             }
 
-            console.log(taskInput.value)
             this.addTask(taskInput, taskList)
             return taskInput.value = ''
         })
@@ -53,7 +52,6 @@ class TaskList {
 
     saveOnStorage(li) {
         this.arrayTasks.push(li);
-        console.log(this.arrayTasks)
         localStorage.setItem('task', JSON.stringify(this.arrayTasks))
     }
 
@@ -68,7 +66,6 @@ class TaskList {
                 alert('You dont have a task history')
                 return
             }
-            console.log(storageData)
             this.showIndex(storageData)
 
             //Changes hitory-div className for CSS
