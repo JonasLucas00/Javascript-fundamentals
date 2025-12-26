@@ -15,11 +15,12 @@ body {
     align-items: center;
     text-align: center;
     padding: 40px 12px;
+    font-weight: 800;
 }
 
 .inical-text h1 {
     margin: 0 0 6px 0;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     color: #07326f;
     letter-spacing: -0.5px;
 }
@@ -62,6 +63,7 @@ body {
     margin-bottom: 10px;
     font-weight: 600;
     color: #1b3760;
+    font-weight: 800;
 }
 
 .sex-btns {
@@ -159,13 +161,49 @@ input[type="text"]:focus {
     text-align: center;
 }
 
+.adults-bmi {
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 10px 28px rgba(7, 50, 111, 0.6);
+    margin-bottom: 100px;
+}
+
+.adults-bmi:hover {
+    transform: translateY(-6px);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.children-bmi:hover {
+    transform: translateY(-6px);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
 .children-bmi {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* background-color: #07326f; */
     margin-top: 80px;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 10px 28px rgba(7, 50, 111, 0.6);
+}
+
+.footer {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.096);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.781);
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin-top: -10px;
 }
