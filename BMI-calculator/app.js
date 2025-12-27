@@ -36,7 +36,32 @@ class BmiCalculator {
         let bmiResultDiv = document.querySelector('.bmi-result-div');
         bmiResultDiv.classList.add('bmi-resultCss');
         bmiResultDiv.textContent = `Your bmi is ${bmiResult}`
+        this.addEmailInput(bmiResultDiv)
         return
+    }
+
+    addEmailInput(bmiResultDiv) {
+        // let emailBmiDiv = document.querySelector('.email-bmi-div');
+        let emailBmiDiv = document.createElement('div');
+        emailBmiDiv.classList.add('email-bmi-div')
+        let sendEmailBtn = document.createElement('button');
+        let emailInput = document.createElement('input');
+        let p = document.createElement('p');
+        p.textContent = `Want to receive your result through email? Fill in bellow`
+        sendEmailBtn.textContent = `Receive`
+        emailBmiDiv.appendChild(p)
+        emailBmiDiv.appendChild(emailInput)
+        emailBmiDiv.appendChild(sendEmailBtn)
+        bmiResultDiv.appendChild(emailBmiDiv)
+
+        emailBmiDiv.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (validator.isEmail(emailInput.value)) {
+                return console.log('Valid email')
+            }
+            return
+
+        })
     }
 
 }
