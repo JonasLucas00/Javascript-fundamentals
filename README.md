@@ -6,11 +6,15 @@ Each project is isolated in its own folder and focuses on specific topics such a
 
 # 📂 Projects
 
+*(More projects will be added over time.)*
+
 ## Task List
 
 A simple CRUD task list application using DOM manipulation and localStorage for data persistence.
 
-*(More projects will be added over time.)*
+## BMI Calculator
+
+A front-end application that calculates the user's BMI using the standard BMI formula and displays an interpretation table.
 
 👤 Author
 
