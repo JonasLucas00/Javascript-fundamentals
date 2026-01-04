@@ -1,68 +1,36 @@
-# Projeto Validador de cadastro + landing page
+# Project Name
 
-Este projeto consiste em um sistema de cadastro e login com validação via JWT.  
-O usuário informa seu e-mail e, caso não exista no banco de dados, ele é direcionado para criar uma conta.  
-Após o login, um token JWT é gerado e armazenado, permitindo o acesso à rota protegida `/`, onde está a landing page.
+## 🚀 Features
 
-> A landing page foi criada para prática de estilização com Bootstrap e CSS — não representa uma versão final para produção.
+- [x] Feature name
 
-## 🚀 Funcionalidades
-
-[x] Cadastro de usuarios
-[x] login de usuarios
-[x] Validação JWTtoken
-[x] Landing page em rota protegida
-
-## 🛠 Tecnologias utilizadas
+## 🛠 Technologies Used
 
 ### Backend
-- Node.js  
-- Express  
-- Sequelize + SQLite  
-- JsonWebToken  
-- Bcrypt  
-- Cookie-parser  
-- Dotenv 
 
 ### Frontend
-- EJS  
-- Bootstrap  
-- CSS  
 
-### Desenvolvimento
-- Nodemon  
+### Development
 
-## 📦 Como executar o projeto
+## 📦 How to Run the Project
 
-1. Clone o repositório:
+1. Clone repository:
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 ```
 
-2. Acesse o diretório do projeto:
+2. Go to the project directory:
 ```bash
-cd nome-do-projeto
+cd project-name
 ```
 
-3. Instale as dependências
+3. Install the dependencies
 ```bash
 npm install
 ```
 
-4. Configuro arquivo .env
-```bash
-JWT_SECRET=suaChaveAqui
-```
+# Author
 
-5. Execute as migrations (caso esteja usando):
-```bash
-npx sequelize-cli db:migrate
-```
+Developed by @lucasJonas00
+GitHub: https://github.com/JonasLucas00
 
-6. Inicie o servidor:
-```bash
-npm run start
-```
-# Autor
-
-Projeto desenvolvido por @lucasJonas00
